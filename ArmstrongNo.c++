@@ -8,14 +8,13 @@ int main()
     cout<<"Enter the No. you want to check for:"<<endl;
     cin>>n;
     int OriginalNo=n;
-    int Arm=0;
+    float Arm=0;
     while (n>0)
     {
         int lastDigit=n%10;
         Arm+=pow(lastDigit,3);
         n=n/10;
     }
-    
     if (OriginalNo==Arm) 
     {
         cout<<"It is a Armstrong No !!"<<endl;
