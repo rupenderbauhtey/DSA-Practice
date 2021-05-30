@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std; 
 
-int SelectionSort(int arr[], int n, int key)
+int SelectionSort(int arr[], int n)
 {
     cout<<"The Sorted Array is: "<<endl;
     cout<<"==============================================="<<endl;
@@ -36,10 +36,10 @@ int main()
 
     for(int i=0; i<n;i++)
     {
-        cout<<"Enter the "<<i+1<<"element of the array"<<endl;
+        cout<<"Enter the "<<i+1<<" element of the array"<<endl;
         cin>>arr[i];
     }
 
-    SelectionSort(arr , n , key);
+    SelectionSort(arr , n );
 
 }
