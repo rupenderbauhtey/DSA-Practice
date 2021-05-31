@@ -1,45 +1,49 @@
 #include<iostream>
 using namespace std; 
 
-int SelectionSort(int arr[], int n)
+int BubbleSort(int arr[], int n)
 {
-    cout<<"The Sorted Array is: "<<endl;
-    cout<<"==============================================="<<endl;
-
-    for (int i=0; i < n ; i++)
+    int counter=0;
+     
+    while ( counter<n-1 )
     {
-        for(int j=i; j<n; j++)
+       for (int i = 0; i < n-counter-1; i++)
+       {
+
+        if (arr[i]>arr[i+1])
         {
-            if (arr[j]<arr[i])
-            {
-                int temp= arr[j];
-                arr[j]=arr[i]; 
-                arr[i]=temp;  
-            }
-            
-        }    
-    } 
-    for (int i = 0; i <n; i++)
+           
+           int temp = arr[i];
+           arr[i] = arr[i+1];
+           arr[i+1]=temp; 
+         }
+       }
+
+        counter++; 
+    }
+    
+    for (int i = 0; i < n; i++)
     {
         cout<<arr[i]<<endl;
     }
-       
+    
 }
 
 int main()
 {
     int n; 
-    int key; 
-    cout<<"Enter the size of the array"<<endl; 
-    cin>>n;
-    int arr[n]; 
+    cout<<"Enter the size of the array :"<<endl; 
+    cin>>n; 
+    int arr[n];
 
     for(int i=0; i<n;i++)
     {
-        cout<<"Enter the "<<i+1<<" element of the array"<<endl;
+        cout<<"Enter the "<<i<<" of the array :"<<endl; 
         cin>>arr[i];
     }
 
-    SelectionSort(arr , n );
+    cout<<"The Sorted Array is:"<<endl;
+    cout<<"================================"<<endl;
 
+    BubbleSort(arr , n);
 }
