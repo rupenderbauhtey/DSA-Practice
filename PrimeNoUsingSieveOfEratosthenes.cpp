@@ -4,7 +4,7 @@ using namespace std;
 void PrimeSieve(int n)
 {
     int arr[n+1]={0}; 
-    for (int i = 2; i <=n; i++)
+    for (int i = 2; i*i <=n; i++)
     {
         for (int j = i*i; j<=n; j+=i)
         {
@@ -18,8 +18,10 @@ void PrimeSieve(int n)
         if (arr[i]==0)
         {
             cout<<i<<" ";
-        }   
-    }   
+        }
+        
+    }
+       
 }
 
 int main()
